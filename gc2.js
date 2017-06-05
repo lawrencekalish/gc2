@@ -13,7 +13,7 @@
     play_time: 0,
     total_play_time: 0,
     last_save_time: new Date(),
-    gps: 0,
+    gps: 9999.87Qc,
     expps: 0,
     gpc: 1,
     sliggoo_gpsmult: 1.0,
@@ -57,8 +57,8 @@
       goomy.level_cap = 100 + goodra.level;
       this.goomies = 0;
       this.total_goomies = 0;
-      goomy.exp = 0;
-      goomy.level = 1;
+      goomy.exp = 101990;
+      goomy.level = 100;
       goomy.next_lv_exp = 100;
       goomy.lv_total_exp = 0;
       this.game_started = false;
@@ -254,7 +254,7 @@
 
   goomy = {
     exp: 0,
-    level: 1,
+    level: 100,
     next_lv_exp: 100,
     lv_total_exp: 0,
     level_cap: 100,
@@ -281,7 +281,7 @@
 
   sliggoo = {
     exp: 0,
-    level: 0,
+    level: 100,
     next_lv_exp: 25,
     lv_total_exp: 0,
     level_up: function() {
@@ -302,7 +302,7 @@
 
   goodra = {
     exp: 0,
-    level: 0,
+    level: 100,
     next_lv_exp: 1000,
     lv_total_exp: 0,
     level_up: function() {
@@ -1001,8 +1001,8 @@
   init_cooldown_time = 200000;
 
   shiny_goomy = {
-    enabled: false,
-    appeared: false,
+    enabled: true,
+    appeared: true,
     opacity: 0,
     x: 0,
     y: 0,
