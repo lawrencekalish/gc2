@@ -15,9 +15,9 @@ class Item
 		@id = id
 
 		@cost = 0
-		@bought = false
+		@bought = true
 
-		@locked = true
+		@locked = false
 		@unlock_condition = ->
 
 		@buy = ->
