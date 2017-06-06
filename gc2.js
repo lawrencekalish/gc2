@@ -6,16 +6,16 @@
 
   basedata = {
     version: "0.363 (pre-alpha)",
-    game_started: false,
-    goomies: 0,
-    total_goomies: 0,
-    total_total_goomies: 0,
+    game_started: true,
+    goomies: 9999999999999999,
+    total_goomies: 9999999999999999,
+    total_total_goomies: 9999999999999999,
     play_time: 0,
     total_play_time: 0,
     last_save_time: new Date(),
-    gps: 0,
+    gps: 9999999999999999,
     expps: 0,
-    gpc: 1,
+    gpc: 9999999999999999,
     sliggoo_gpsmult: 1.0,
     raindance_mult: 1.0,
     frenzy_clickmult: 1.0,
@@ -62,7 +62,7 @@
       goomy.level = 1;
       goomy.next_lv_exp = 100;
       goomy.lv_total_exp = 0;
-      this.game_started = false;
+      this.game_started = true;
       this.play_time = 0;
       this.clicks = 0;
       for (_i = 0, _len = generators.length; _i < _len; _i++) {
@@ -74,7 +74,7 @@
       }
       for (_j = 0, _len1 = itemlist.length; _j < _len1; _j++) {
         item = itemlist[_j];
-        item.bought = false;
+        item.bought = true;
       }
       recalc();
       update_all_numbers();
@@ -166,85 +166,85 @@
 
   cursor.base_gps = 0.2;
 
-  cursor.set_base_cost(20);
+  cursor.set_base_cost(1);
 
   youngster = new Generator("youngster");
 
   youngster.base_gps = 1.0;
 
-  youngster.set_base_cost(100);
+  youngster.set_base_cost(1);
 
   daycare = new Generator("daycare");
 
   daycare.base_gps = 5.0;
 
-  daycare.set_base_cost(600);
+  daycare.set_base_cost(1);
 
   reserve = new Generator("reserve");
 
   reserve.base_gps = 20.0;
 
-  reserve.set_base_cost(3000);
+  reserve.set_base_cost(1);
 
   farm = new Generator("farm");
 
   farm.base_gps = 75.0;
 
-  farm.set_base_cost(15000);
+  farm.set_base_cost(1);
 
   fountain = new Generator("fountain");
 
   fountain.base_gps = 250.0;
 
-  fountain.set_base_cost(70000);
+  fountain.set_base_cost(1);
 
   cave = new Generator("cave");
 
   cave.base_gps = 1000.0;
 
-  cave.set_base_cost(400000);
+  cave.set_base_cost(1);
 
   trench = new Generator("trench");
 
   trench.base_gps = 4000.0;
 
-  trench.set_base_cost(2400000);
+  trench.set_base_cost(1);
 
   arceus = new Generator("arceus");
 
   arceus.base_gps = 18000;
 
-  arceus.set_base_cost(20000000);
+  arceus.set_base_cost(1);
 
   rngabuser = new Generator("rngabuser");
 
   rngabuser.base_gps = 65536;
 
-  rngabuser.set_base_cost(134217728);
+  rngabuser.set_base_cost(1);
 
   cloninglab = new Generator("cloninglab");
 
   cloninglab.base_gps = 288000;
 
-  cloninglab.set_base_cost(1440000000);
+  cloninglab.set_base_cost(1);
 
   church = new Generator("church");
 
   church.base_gps = 1920000;
 
-  church.set_base_cost(24.192e9);
+  church.set_base_cost(1);
 
   gcminer = new Generator("gcminer");
 
   gcminer.base_gps = 16777216;
 
-  gcminer.set_base_cost(549755813888);
+  gcminer.set_base_cost(1);
 
   photoncollider = new Generator("photoncollider");
 
   photoncollider.base_gps = 299792458;
 
-  photoncollider.set_base_cost(25902068371200);
+  photoncollider.set_base_cost(1);
 
   ngens = [daycare, reserve, farm, fountain, cave, trench, arceus, rngabuser, cloninglab, church, gcminer, photoncollider];
 
@@ -1354,8 +1354,8 @@
   youngster12.cost = 259020683712000000;
 
   youngsterpocalypse = {
-    started: false,
-    time_left: 259200000
+    started: true,
+    time_left: 259200000000000
   };
 
   this.export_save = save_to_local_storage;
