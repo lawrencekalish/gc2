@@ -1,6 +1,6 @@
 goomy =
 	exp: 0,
-	level: 1,
+	level: 100,
 	next_lv_exp: 100,
 	lv_total_exp: 0,
 	level_cap: 100,
@@ -22,9 +22,9 @@ goomy =
 
 sliggoo =
 	exp: 0,
-	level: 0,
+	level: 100,
 	next_lv_exp: 25,
-	lv_total_exp: 0,
+	lv_total_exp: 100,
 
 	level_up: ->
 		@level += 1
@@ -39,9 +39,9 @@ sliggoo =
 
 goodra =
 	exp: 0,
-	level: 0,
+	level: 100,
 	next_lv_exp: 1000,
-	lv_total_exp: 0,
+	lv_total_exp: 100,
 
 	level_up: ->
 		@level += 1
