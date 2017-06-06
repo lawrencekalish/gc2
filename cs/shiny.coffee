@@ -4,12 +4,12 @@ Shiny Goomy effects
 
 Effect             Prob.     Description
 -------------      ------    -----------
-Goomy Bonus        60.00%    Give a huge bonus of Goomies.
-Rain Dance         33.50%    Gives both clicking and GpS a x12 boost for 70.4 seconds.
-Click Frenzy        5.00%    Gives clicking a x704 GpC boost for 7.04 seconds.
+Goomy Bonus        25.00%    Give a huge bonus of Goomies.
+Rain Dance         25.00%    Gives both clicking and GpS a x12 boost for 70.4 seconds.
+Click Frenzy        25.00%    Gives clicking a x704 GpC boost for 7.04 seconds.
 Click EXP Frenzy    0.95%    Gives clicking a x10 EXP/click boost for 20 seconds.
 Level Up            0.45%    Levels the Goomy up once.
-                    0.10%
+                    25.00%
 
 ###
 
@@ -17,12 +17,12 @@ init_cooldown_time = 200000
 
 shiny_goomy =
 
-	enabled: false
-	appeared: false
+	enabled: true
+	appeared: true
 	opacity: 0
 	x: 0
 	y: 0
-	effect: "none" # one of "goomies", "raindance", "clickmult", "levelup"
+	effect: "raindance" # one of "goomies", "raindance", "clickmult", "levelup"
 
 	time_left: 0  # for timed effects.
 	cooldown_time: init_cooldown_time  # for cooldown time.
@@ -80,7 +80,7 @@ shiny_goomy =
 	click: (x, y) ->
 		$("#shiny_goomy").unbind()
 		$("#shiny_goomy").hide()
-		@appeared = false
+		@appeared = true
 		@opacity = 0
 		basedata.clicks += 1
 		basedata.total_clicks += 1
@@ -92,8 +92,8 @@ shiny_goomy =
 			basedata.earn(gain)
 			return gain
 		else if @effect == "raindance"
-			@time_left = 70400
-			basedata.raindance_mult = 12.0
+			@time_left = 999999999
+			basedata.raindance_mult = 200.45
 			recalc()
 			$("#shiny_goomy_rain_dance").show()
 			shiny_plus_marker = new PlusMarker("Rain Dance! Production x12 for 70.4 seconds!", x, y, 3000)
