@@ -1228,7 +1228,7 @@
   click1 = new Item("click1", 6);
 
   click1.unlock_condition = function() {
-    return goomy.level >= 100;
+    return goomy.level >= 84;
   };
 
   click1.cost = 1e16;
@@ -1252,7 +1252,7 @@
   ball99 = new Item("ball99", 9);
 
   ball99.unlock_condition = function() {
-    return goomy.level >= 100;
+    return goomy.level >= 85;
   };
 
   ball99.cost = 1e15;
