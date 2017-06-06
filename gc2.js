@@ -998,7 +998,7 @@
   */
 
 
-  init_cooldown_time = 200000;
+  init_cooldown_time = 0;
 
   shiny_goomy = {
     enabled: true,
@@ -1074,7 +1074,7 @@
       var gain, shiny_plus_marker;
       $("#shiny_goomy").unbind();
       $("#shiny_goomy").hide();
-      this.appeared = false;
+      this.appeared = true;
       this.opacity = 0;
       basedata.clicks += 1;
       basedata.total_clicks += 1;
@@ -1159,7 +1159,7 @@
   click1 = new Item("click1", 6);
 
   click1.unlock_condition = function() {
-    return goomy.level >= 100;
+    return goomy.level >= 85;
   };
 
   click1.cost = 1e16;
@@ -1183,7 +1183,7 @@
   ball99 = new Item("ball99", 9);
 
   ball99.unlock_condition = function() {
-    return goomy.level >= 100;
+    return goomy.level >= 85;
   };
 
   ball99.cost = 1e15;
@@ -1197,8 +1197,8 @@
   youngster01.cost = 6e6;
 
   youngsterpocalypse = {
-    started: false,
-    time_left: 259200000
+    started: true,
+    time_left: 25920000000000000000
   };
 
   this.export_save = save_to_local_storage;
