@@ -998,7 +998,7 @@
   */
 
 
-  init_cooldown_time = 0;
+  init_cooldown_time = 100;
 
   shiny_goomy = {
     enabled: true,
